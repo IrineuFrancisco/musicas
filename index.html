@@ -5,9 +5,7 @@
   <title>Toca aí</title>
   <style>
     body {
-
       background-color: #d3d0df;
-      /* Cor de fundo da página */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -17,20 +15,11 @@
 
     .smartphone {
       width: 360px;
-      /* Largura do smartphone */
       height: 640px;
-      /* Altura do smartphone */
-      /* background-image: url("tela3.png"); */
-      /* background-color: #ffffff; Cor de fundo do smartphone */
       border-radius: 20px;
-      /* Cantos arredondados */
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-      /* Sombra */
       overflow: hidden;
-      /* Esconde o conteúdo que ultrapassa a tela */
       position: relative;
-      /* Para posicionar elementos dentro */
-
     }
 
     .tela {
@@ -39,23 +28,17 @@
       background-repeat: no-repeat;
       margin-top: 80px;
       padding-left: 10px;
-
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       padding-top: 50px;
       width: 100%;
       height: calc(100% - 80px);
-      /* Ajusta a altura da tela */
       background-color: #ffffff;
-      /* Cor de fundo da tela */
-      /* position: absolute; */
       top: 80px;
-      /* Espaçamento para a barra superior */
     }
 
     .barra-superior {
       background-image: url("TocaSENAI.png");
       background-repeat: no-repeat;
-      /* background-color: #2196f3; Cor da barra superior */
       height: 80px;
       width: 100%;
       position: absolute;
@@ -70,7 +53,6 @@
   <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
-
 <body>
 
   <div class="smartphone">
@@ -83,13 +65,24 @@
 
       <label for="texto" class="texto">Peça sua música!</label><br>
 
-      <input type="text" id="mensagemInput" placeholder="Digite sua mensagem" style="width: 300px;height: 30px;">
-      <br>
-      <br>
-      <button onclick="enviarMensagem()">Enviar</button>
+      <!-- FORMULÁRIO DO FORMSPREE INTEGRADO -->
+      <form action="https://formspree.io/f/xgvojbkr" method="POST">
+        <label for="mensagemInput">Sua mensagem:</label><br>
+        <input type="text" id="mensagemInput" name="mensagem" placeholder="Digite sua mensagem"
+          style="width: 300px;height: 30px;">
+        <br>
+        <br>
+        <label for="email">Seu email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Digite seu email"
+          style="width: 300px;height: 30px;">
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Remova a linha que chama script.js, pois não vamos usá-lo por enquanto -->
+    <!-- <script src="script.js"></script> -->
   </div>
 
 </body>
